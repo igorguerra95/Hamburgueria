@@ -1,0 +1,6 @@
+{
+  "name": "Predador da Brasa | Hamburgueria Artesanal",
+  "description": "Hambúrgueres artesanais forjados no fogo vivo e brasa intensa. Blends de cortes nobres Angus, queijos artesanais e receitas autorais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

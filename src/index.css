@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 222 47% 11%; /* #0F172A Preto Elegante Slate escuro */
+    --background-subtle: 222 47% 8%; /* Fundo ultra profundo */
+    --foreground: 210 40% 98%;
+    
+    --card: 222 47% 14%; /* Superfície de card */
+    --card-hover: 222 47% 18%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 222 47% 12%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 21 89% 52%; /* #EA580C Laranja Queimado */
+    --primary-hover: 21 95% 46%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 217 33% 18%;
+    --secondary-foreground: 210 40% 96%;
+    
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+    
+    --accent: 21 89% 52%;
+    --accent-foreground: 0 0% 100%;
+    
+    --border: 217 33% 22%;
+    --border-accent: 21 89% 52% / 0.3;
+    --input: 217 33% 20%;
+    --ring: 21 89% 52%;
+    
+    --radius: 0.75rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Utilitários semânticos e efeitos artesanais */
+.bg-subtle-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(234, 88, 12, 0.15) 0%, transparent 60%);
+}
+
+.bg-ember-gradient {
+  background: linear-gradient(135deg, rgba(234, 88, 12, 0.2) 0%, rgba(15, 23, 42, 0.95) 100%);
+}
+
+.hairline-border {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hairline-border-accent {
+  border: 1px solid rgba(234, 88, 12, 0.35);
+}
+
+.fire-glow {
+  box-shadow: 0 10px 40px -10px rgba(234, 88, 12, 0.35);
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+/* Animações e pulsos sutis */
+@keyframes subtle-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.5);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 12px rgba(234, 88, 12, 0);
+  }
+}
+
+.whatsapp-pulse {
+  animation: subtle-pulse 3s infinite ease-in-out;
+}
